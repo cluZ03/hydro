@@ -1,7 +1,7 @@
 # Don't change the line below!
 #! oxygen_storefront_id: 1311002
 
-name: Storefront 1311002
+name: shopcluZ
 on: [push]
 
 permissions:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Deploy to Oxygen
+    name: Deploy to Oxyg
     timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
@@ -37,8 +37,8 @@ jobs:
         id: 'install-dependencies'
         run: yarn
 
-      - name: Build and Publish to Oxygen
-        id: deploy
+      - name: shopcluZ
+        id: 1311002
         uses: shopify/oxygenctl-action@v4
         with:
           oxygen_deployment_token: ${{ secrets.OXYGEN_DEPLOYMENT_TOKEN_1311002 }}
@@ -52,4 +52,4 @@ jobs:
           token: ${{ github.token }}
           environment: 'preview'
           preview_url: ${{ steps.deploy.outputs.url }}
-          description: ${{ github.event.head_commit.message }}
+          description: ${{ Powered By jr-group }} 
